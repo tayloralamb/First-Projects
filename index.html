@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>
+      Simple Payback Calculator for HVAC
+      </title>
+      <link rel = "stylesheet"
+      href = "style.css">
+  </head>
+  <script>
+  function Calculate() {
+    var currentEnergy=document.getElementById("CurrentEnergyCost").value;
+    var replacementCost=document.getElementById("ReplacementCost").value;
+    var replacementEnergy=document.getElementById("ReplacementEnergyCost").value;
+    var energySavings = currentEnergy - replacementEnergy;
+    var simplePayback = replacementCost / energySavings;
+    var paybackRounded = Math.round(simplePayback * 10) / 10;
+    document.getElementById("Payback").innerHTML = paybackRounded + " years";
+  }
+
+  </script>
+  <body>
+    <h1>
+      Simple Payback Calculator for HVAC
+    </h1>
+    <div>
+      <form id="form1">
+      Current Yearly Energy Cost:
+      <input type=number id="CurrentEnergyCost"><br>
+      Replacement Cost:
+      <input type=number id="ReplacementCost"><br>
+      Replacement Yearly Energy Cost:
+      <input type=number id="ReplacementEnergyCost"><br>
+      </form>
+    </div>
+    <br>
+    <button onclick="Calculate()">Calculate</button>
+
+    <div>
+      Simple Payback:
+      <p id="Payback">
+      </p>
+    </div>
+  </body>

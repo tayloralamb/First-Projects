@@ -1,0 +1,26 @@
+html {
+  background-image: url(hvacPhoto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  backgroun: transparent;
+
+
+
+}
+h1{}
+body{
+  line-height: 3;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  padding-top: 10px;
+
+  text-align: center;
+}
+input{
+  background: linear-gradient(gray, white)
+
+}
+div{}
+button{
+  background: linear-gradient(gray, white);
+}
