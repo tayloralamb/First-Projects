@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+html{
+  background-image: url(cuttingboardedit.jpeg);
+  background-size: 100%;
+}
+body{
+font-family: lato;
+margin:auto;
+width:60%;
+padding-top: 30px;
+line-height: 50px;
+color: #FFFFCC;
+text-shadow: 3px 3px 5px black;
+
+
+}
+
+div{
+
+    display:inline;
+
+
+}
+h1{
+  text-shadow: 3px 3px 5px black;
+}
+select {
+  width: auto;
+  padding: 2px 2px;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: #FFFFCC;
+}
+
+button {
+  border-radius: 10px;
+  border-style: hidden;
+  color: black;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin:auto;
+  width:70%;
+  background-color: #FFFFCC;
+}
+
+input{
+  width: 50px;
+  border: 2px solid black;
+  padding-left: 2px;
+  text-align: right;
+  background-color: #FFFFCC;
+}
+
+form{
+  display: inline;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kitchen Unit Converter</title>
+    <link rel = "stylesheet"
+    href = "style.css">
+  </head>
+  <script>
+  function Convert(){
+    var originalAmount=document.getElementById("CurrentAmount").value;
+    var multiplier;
+    var divider;
+
+    if (document.getElementById("currentUnit").value==="Fluid Ounces")
+    {multiplier=1}
+    if (document.getElementById("currentUnit").value==="Cups")
+    {multiplier=8}
+    if (document.getElementById("currentUnit").value==="Teaspoons")
+    {multiplier=.16666666}
+    if (document.getElementById("currentUnit").value==="Tablespoons")
+    {multiplier=.5}
+    if (document.getElementById("currentUnit").value==="Pints")
+    {multiplier=16}
+    if (document.getElementById("currentUnit").value==="Quarts")
+    {multiplier=32}
+    if (document.getElementById("currentUnit").value==="Gallons")
+    {multiplier=128}
+    if (document.getElementById("currentUnit").value==="Liters")
+    {multiplier=34}
+    if (document.getElementById("currentUnit").value==="Grams")
+    {multiplier=.033814022}
+
+    var startingOunces = originalAmount*multiplier;
+
+
+    if (document.getElementById("DesiredUnit").value==="Fluid Ounces")
+    {divider=1}
+    if (document.getElementById("DesiredUnit").value==="Cups")
+    {divider=8}
+    if (document.getElementById("DesiredUnit").value==="Teaspoons")
+    {divider=.16666666}
+    if (document.getElementById("DesiredUnit").value==="Tablespoons")
+    {divider=.5}
+    if (document.getElementById("DesiredUnit").value==="Pints")
+    {divider=16}
+    if (document.getElementById("DesiredUnit").value==="Quarts")
+    {divider=32}
+    if (document.getElementById("DesiredUnit").value==="Gallons")
+    {divider=128}
+    if (document.getElementById("DesiredUnit").value==="Liters")
+    {divider=34}
+    if (document.getElementById("DesiredUnit").value==="Grams")
+    {divider=.033814022}
+
+    var solution = startingOunces/divider;
+    var finalUnit = document.getElementById("DesiredUnit").value
+
+      document.getElementById("Output").innerHTML = solution + " " + finalUnit;
+
+  }
+  </script>
+  <body>
+
+    <h1>
+      Kitchen Unit Converter
+    </h1>
+<div>
+    <form id="form1">
+      Current Units
+      <input type=number id="CurrentAmount">
+    </form>
+
+    <select class="units" id="currentUnit">
+      <option value = "Fluid Ounces">Fluid Ounces</option>
+      <option value = "Cups">Cups</option>
+      <option value = "Teaspoons">Teaspoons</option>
+      <option value = "Tablespoons">Tablespoons</option>
+      <option value = "Pints">Pints</option>
+      <option value = "Quarts">Quarts</option>
+      <option value = "Gallons">Gallons</option>
+      <option value = "Liters">Liters</option>
+      <option value = "Grams">Grams</option>
+    </select>
+  </div>
+<br>
+<div>
+Desired Units
+    <select class="units" id="DesiredUnit">
+      <option value = "Fluid Ounces">Fluid Ounces</option>
+      <option value = "Cups">Cups</option>
+      <option value = "Teaspoons">Teaspoons</option>
+      <option value = "Tablespoons">Tablespoons</option>
+      <option value = "Pints">Pints</option>
+      <option value = "Quarts">Quarts</option>
+      <option value = "Gallons">Gallons</option>
+      <option value = "Liters">Liters</option>
+      <option value = "Grams">Grams</option>
+    </select>
+  </div>
+
+<br>
+
+    <button onclick="Convert()">Convert</button>
+
+<p id="Output">
+
+</p>
+
+  </body>
+
+
+</html>
